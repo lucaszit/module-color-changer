@@ -3,44 +3,43 @@
   Copyright © 2025 Hibrido. All rights reserved.
   See COPYING.txt for license details.
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="hibrido" translate="label" sortOrder="300">
             <label>Hibrido</label>
         </tab>
-        <section id="color_changer" translate="label" type="text" sortOrder="10" showInDefault="1"
-                 showInWebsite="1" showInStore="1">
+        <section id="color_changer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Color Changes</label>
             <tab>hibrido</tab>
             <resource>Hibrido_ColorChanger::config</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1"
-                   showInWebsite="1" showInStore="1">
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configurations</label>
-
-                <field id="enabled" translate="label" type="select" sortOrder="10" showInStore="1">
+                <field id="enable_module" translate="label" type="select" sortOrder="10" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Module Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-
-                <field id="color_hex" translate="label" type="text" sortOrder="20" showInStore="1">
-                    <label>Buttons Collors (HEX)</label>
-                    <frontend_class>validate-color</frontend_class>
+                <field id="color_hex" translate="label comment" type="text" sortOrder="20" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Button Colors (HEX)</label>
+                    <frontend_model>Hibrido\ColorChanger\Block\Adminhtml\System\Config\ColorPicker</frontend_model>
+                    <comment>Sets the color of the tags.</comment>
+                    <depends>
+                        <field id="enable_module">1</field>
+                    </depends>
                 </field>
-
-                <field id="tags" translate="label" type="text" sortOrder="30" showInStore="1">
+                <field id="tags" translate="label" type="textarea" sortOrder="30" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Tags to Change Color</label>
                     <comment>Ex: button,.btn,.action.primary</comment>
+                    <depends>
+                        <field id="enable_module">1</field>
+                    </depends>
                 </field>
-
-                <field id="remove_css" translate="label" type="button" sortOrder="40" showInStore="1">
-                    <label>Remove generated stylesheets</label>
-                    <frontend_model>Hibrido\ColorChanger\Block\Adminhtml\System\Config\RemoveCssButton</frontend_model>
-                </field>
-
-                <field id="cli_hint" translate="label" type="label" sortOrder="50" showInStore="1">
+                <field id="cli_hint" translate="label comment" type="label" sortOrder="50" showInWebsite="1" showInStore="1" showInDefault="1">
                     <label>CLI command use</label>
-                    <comment>Use: <code>bin/magento color:change [hex] [store_id]</code></comment>
+                    <comment>Use: bin/magento color:change hex store_id</comment>
+                    <tooltip>bin/magento color:change 000000 1</tooltip>
+                    <depends>
+                        <field id="enable_module">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
