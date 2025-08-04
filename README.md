@@ -29,6 +29,10 @@ o Teste requeria e ainda complementar a funcionalidade pensando na experiência
 do cliente, que ao meu ver, é sempre importante nós desenvolvedores termos em 
 vista.
 
+Pensando em atualizações, ainda daria para implementar:
+- Criar um botão para deletar o arquivo de CSS gerado, permitindo retornar ao
+padrão do tema usado na loja.
+
 ___
 # Módulo Hibrido ColorChanger
 
