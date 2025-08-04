@@ -1,0 +1,8 @@
+"Color Changes","Trocar Cores"
+"General Configurations","Configurações Gerais"
+"Module Enabled","Habilitar Módulo"
+"Button Colors (HEX)","Cores do Botão (HEX)"
+"Sets the color of the tags.","Define a cor das tags."
+"Tags to Change Color","Tags para mudar de cor"
+"CLI command use","Uso do comando CLI"
+"Use: bin/magento color:change hex store_id","Usar: bin/magento color:change hex store_id"
