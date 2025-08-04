@@ -70,8 +70,11 @@ bin/magento color:change hex store_id
 ## Resultado das mudanças de cores nos botões:
 
 ### Alteração no frontend da loja:
-- [![Visualização da Alteração](https://ibb.co/FLLT8XgH)](https://ibb.co/FLLT8XgH)
+![Visualização da Alteração](https://i.ibb.co/tTTrYz8L/Captura-de-tela-de-2025-08-03-22-16-42.png)
 
 ### Resposta do comando CLI:
-- [![Comando CLI](https://ibb.co/JWjVgwMZ)](https://ibb.co/JWjVgwMZ)
+![Comando CLI](https://i.ibb.co/W1Z7tHn/Captura-de-tela-de-2025-08-03-22-46-33.png)
+
+### Configurações no painel administrativo:
+![Configurações no Admin](https://i.ibb.co/n98jK5V/Captura-de-tela-de-2025-08-03-22-41-26.png)
 
