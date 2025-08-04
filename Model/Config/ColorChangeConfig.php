@@ -16,7 +16,7 @@ use Magento\Store\Model\ScopeInterface;
  */
 class ColorChangeConfig
 {
-    public const string XML_PATH_ENABLED = 'color_changer/general/enabled';
+    public const string XML_PATH_ENABLED = 'color_changer/general/enable_module';
     public const string XML_PATH_COLOR_HEX = 'color_changer/general/color_hex';
     public const string XML_PATH_TAGS = 'color_changer/general/tags';
 

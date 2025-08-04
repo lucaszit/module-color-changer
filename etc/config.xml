@@ -7,7 +7,7 @@
     <default>
         <color_changer>
             <general>
-                <enabled>0</enabled>
+                <enable_module>0</enable_module>
                 <color_hex>#000000</color_hex>
                 <tags>button,.btn,.action.primary</tags>
             </general>
